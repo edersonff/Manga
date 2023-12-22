@@ -2,26 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  @apply    bg-[#161616] text-white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html, body, #root {
+  height: 100%;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+button, [type='button'], [type='reset'], [type='submit'] {
+  color:white
+}
+
+.selectDisable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.center{
+  @apply flex justify-center items-center;
+}
+
+.content{
+  @apply w-full lg:w-3/5;
+}
+
+.absolute-center{
+  @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;
+
+}
+
+.focus-w input{
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 200px;
+}
+
+.focus-w input:focus{
+  width: 350px;
+}
+
+.comic-parent .absolute-title{
+  @apply delay-200
+}
+
+.comic-parent:hover .absolute-title{
+  @apply pb-4 delay-0;
+}
+
+.comic-parent:hover .title{
+  @apply text-orange-500;
 }
