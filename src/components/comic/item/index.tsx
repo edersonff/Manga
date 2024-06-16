@@ -42,9 +42,12 @@ export default function ComicItem({
           {flag && (
             <Badge
               badgeContent={flag}
-              className={
-                "absolute top-2 left-5 uppercase text-xs font-bold -rotate-12 stroke-2"
-              }
+              className={"absolute top-2 left-5 -rotate-12 stroke-2"}
+              slotProps={{
+                badge: {
+                  className: "text-[10px] font-bold uppercase",
+                },
+              }}
               color={flagColor}
             />
           )}

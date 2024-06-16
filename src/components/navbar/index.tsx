@@ -7,7 +7,7 @@ import React, { useMemo, useState } from "react";
 import { IconType } from "react-icons";
 import { FaBook, FaFire, FaNewspaper } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
-import { TbReload } from "react-icons/tb";
+import { TbPlayerPlayFilled, TbReload } from "react-icons/tb";
 import colors from "tailwindcss/colors";
 import NavbarSearch from "./search";
 
@@ -17,14 +17,16 @@ export default function Navbar() {
       <div className="w-full content flex gap-2 justify-between items-center h-20">
         <div className="flex gap-10 h-full">
           <Link href="/" className="h-full py-2 selectDisable">
-            <img
+            <Image
               src="/logo.png"
               className="cursor-pointer object-scale-down h-full min-w-20"
+              width={100}
+              height={100}
               alt="logo"
             />
           </Link>
           <div className="flex gap-2 h-full">
-            <NavbarLink href="/about" Icon={FaBook}>
+            <NavbarLink href="/" Icon={FaBook}>
               Mangás
             </NavbarLink>
             <NavbarLink href="/recent" Icon={TbReload}>
@@ -33,8 +35,8 @@ export default function Navbar() {
             <NavbarLink href="/popular" Icon={FaFire}>
               Mais Lidos
             </NavbarLink>
-            <NavbarLink href="/news" Icon={FaNewspaper}>
-              Notícias
+            <NavbarLink href="/videos" Icon={TbPlayerPlayFilled}>
+              Vídeos
             </NavbarLink>
           </div>
         </div>

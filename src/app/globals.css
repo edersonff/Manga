@@ -27,7 +27,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
 }
 
 .content{
-  @apply w-full lg:w-3/5;
+  @apply w-full lg:w-4/6;
 }
 
 .absolute-center{
